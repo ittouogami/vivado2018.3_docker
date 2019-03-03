@@ -18,7 +18,7 @@ if [[ -n "$USER_ID" ]]; then
   echo root:root |chpasswd
   echo ${USER}:${USER} |chpasswd
   chown $USER_ID:$GROUP_ID -R $HOME
-  chown $USER_ID:$GROUP_ID -R /opt
+  #chown $USER_ID:$GROUP_ID -R /opt
   chown $USER $(tty)
   exec /usr/sbin/gosu "$USER" "$@"
 else

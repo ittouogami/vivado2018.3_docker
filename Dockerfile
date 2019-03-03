@@ -15,8 +15,7 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 COPY install_config.txt /vivado-installer/
-
-ARG VIVADO_TAR_URI=smb://192.168.103.223/Share/Xilinx_SDx_2018.3_1207_2324.tar.gz
+ARG VIVADO_TAR_URI=smb://192.168.0.217/Share/Xilinx_SDx_2018.3_1207_2324.tar.gz
 RUN \
   curl -u guest ${VIVADO_TAR_URI} | tar zx --strip-components=1 -C /vivado-installer && \
   /vivado-installer/xsetup \
