@@ -3,8 +3,8 @@ LABEL maintainer "ittou <VYG07066@gmail.com>"
 
 RUN \
   dpkg --add-architecture i386 && \
-  apt update && \
-  apt -y --no-install-recommends install \
+  apt-get update && \
+  apt-get -y --no-install-recommends install \
     build-essential binutils ncurses-dev u-boot-tools file tofrodos iproute2 \
     gawk net-tools libncurses5-dev tftp tftpd-hpa zlib1g-dev libssl-dev flex bison libselinux1 \
     diffstat xvfb chrpath xterm libtool socat autoconf unzip texinfo gcc-multilib \
@@ -15,7 +15,7 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 COPY install_config.txt /vivado-installer/
-ARG VIVADO_TAR_URI=smb://192.168.0.217/Share/Xilinx_SDx_2018.3_1207_2324.tar.gz
+ARG VIVADO_TAR_URI=smb://192.168.103.223/Share/Xilinx_SDx_2018.3_1207_2324.tar.gz
 RUN \
   curl -u guest ${VIVADO_TAR_URI} | tar zx --strip-components=1 -C /vivado-installer && \
   /vivado-installer/xsetup \
