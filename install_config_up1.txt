@@ -1,14 +1,14 @@
-#### SDx Development Environments Install Configuration ####
-Edition=SDx Development Environments
+#### Vivado HL WebPACK Install Configuration ####
+Edition=Vivado HL WebPACK
 
 # Path where Xilinx software will be installed.
 Destination=/opt/Xilinx
 
 # Choose the Products/Devices the you would like to install.
-Modules=Built-in Platforms and associated devices for SDSoC:1,Zynq UltraScale+ MPSoC:1,Zynq-7000:1,Engineering Sample Devices for Custom Platforms:0,Kintex UltraScale+:1,ARM Cortex-A53:1,Spartan-7:1,ARM Cortex-A9:1,ARM Cortex R5:1,Virtex UltraScale+ 58G ES:0,System Generator for DSP:0,Artix-7:1,Built-in Platforms and associated devices for SDAccel:1,DocNav:1,Virtex UltraScale+ HBM:1,Kintex-7:1,Virtex UltraScale+:1,Model Composer:0,Zynq UltraScale+ RFSoC ES:0,Kintex UltraScale:1,Virtex UltraScale:1,Zynq UltraScale+ RFSoC:1,Zynq UltraScale+ MPSoC ES:0,MicroBlaze:1,Virtex-7:1,Virtex UltraScale+ HBM ES:0
+Modules=Kintex UltraScale:1,Kintex-7:1,Model Composer:0,ARM Cortex-A53:1,Zynq-7000:1,Zynq UltraScale+ MPSoC:1,Spartan-7:1,SDK Core Tools:1,ARM Cortex-A9:1,ARM Cortex R5:1,Virtex UltraScale+ 58G ES:0,Zynq UltraScale+ MPSoC ES:0,System Generator for DSP:0,Artix-7:1,Kintex UltraScale+:1,MicroBlaze:1,Virtex UltraScale+ HBM ES:0
 
 # Choose the post install scripts you'd like to run as part of the finalization step. Please note that some of these scripts may require user interaction during runtime.
-InstallOptions=Acquire or Manage a License Key:0,Enable WebTalk for SDK to send usage statistics to Xilinx:1,Enable WebTalk for SDx and Vivado to send usage statistics to Xilinx (Always enabled for WebPACK license):1
+InstallOptions=
 
 ## Shortcuts and File associations ##
 # Choose whether Start menu/Application menu shortcuts will be created or not.
