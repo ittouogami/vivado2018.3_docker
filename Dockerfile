@@ -1,6 +1,7 @@
 FROM ubuntu16
 LABEL maintainer "ittou <VYG07066@gmail.com>"
 
+ENV VIVADO_VER=2018.3
 ARG URIS=smb://192.168.103.223/Share/Vivado2018.3/
 ARG VIVADO_MAIN=Xilinx_Vivado_SDK_2018.3_1207_2324.tar.gz
 ARG VIVADO_UPDATE1=Xilinx_Vivado_SDx_Update_2018.3.1_0326_0329.tar.gz
@@ -28,9 +29,8 @@ RUN \
     --agree 3rdPartyEULA,WebTalkTerms,XilinxEULA \
     --batch Install \
     --config /VIVADO-INSTALLER_UP1/install_config_up1.txt && \
-  rm -rf /VIVADO-INSTALLER_UP1 && \
+  rm -rf /VIVADO-INSTALLER_UP1
 # /root/.Xilinx generated
-  bash -c '/opt/Xilinx/Vivado/2018.3/settings64.sh'
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
