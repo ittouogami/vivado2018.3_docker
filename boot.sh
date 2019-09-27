@@ -12,4 +12,4 @@ docker run -it --rm \
     -v /dev/bus/usb:/dev/bus/usb \
     -v /sys:/sys:ro \
     -w $HOME \
-    vivado2018.3 /bin/bash
+    vivado2018.3
